@@ -21,7 +21,6 @@ public class OrderServiceImpl implements OrderService {
         this.discountPolicy = discountPolicy;
     }
 
-
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         Member member = memberRepository.findById(memberId);
@@ -32,5 +31,9 @@ public class OrderServiceImpl implements OrderService {
     // TEST 용
     public MemberRepository getMemberRepository() {
         return memberRepository;
+    }
+
+    public DiscountPolicy getDiscountPolicy() {
+        return discountPolicy;
     }
 }
